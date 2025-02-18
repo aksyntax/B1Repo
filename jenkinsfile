@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                node print
+                bat 'node print'
                 echo 'Deploying'
             }
         }
