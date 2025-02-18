@@ -18,5 +18,10 @@ pipeline {
                 echo 'Deploying'
             }
         }
+        stage('Deploying on github pipline') {
+            steps {
+                publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: '', reportFiles: 'Default.html', reportName: 'HTML Report', reportTitles: '', useWrapperFileDirectly: true])
+            }
+        }
     }
 }
